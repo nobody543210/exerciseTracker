@@ -69,7 +69,7 @@ app.post('/api/users/:_id/exercises', async (req, res)=>{
 
 
   res.json({
-    '_id': exer._id,
+    '_id': user._id,
     'username': username,
     'date': exer.date,
     'duration': exer.duration,
