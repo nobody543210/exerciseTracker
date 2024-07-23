@@ -46,7 +46,7 @@ app.post('/api/users/:_id/exercises', async (req, res)=>{
     res.send('duration required')
     return
   }
-  if(date.trim()===''|| !date){
+  if(!date|| date.trim()===''){
     date=new Date()
     console.log(date)
   }
