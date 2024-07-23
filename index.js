@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 require('dotenv').config()
 const User= require('./user')
 const Log = require('./log')
-const Exercise = require('./Exercise')
+const Exercise = require('./exercise')
 const PORT = process.env.PORT || 3000
 const dbconn = require('./dbconn')
 dbconn()
