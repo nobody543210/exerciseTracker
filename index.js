@@ -102,7 +102,7 @@ app.get('/api/users/:_id/logs', async (req, res) => {
     return
   }
   // Use the username variable to access log data in the 'username' field
-  const logs = user.logs.filter(e => e.username === req.query.username)
+  let logs = user.logs.filter(e => e.username === req.query.username)
   // If the query parameter is a limit, you can set it to -1 for all logs, or a positive integer for the requested logs
   if(req.query.limit !== undefined && parseInt(req.query.limit) !== 0){
     logs = logs.slice(0,parseInt(req.query.limit)) 
